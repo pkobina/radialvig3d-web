@@ -18,8 +18,14 @@
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">Radial Vig3D</div>
+        <div class="title" id="blink">Cliquer sur l'icône bleu pour passer en plein écran</div>
       </div>
     </div>
+	<script type="text/javascript">
+        var blink = document.getElementById('blink');
+        setInterval(function() {
+            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 400);
+    </script>
   </body>
 </html>
